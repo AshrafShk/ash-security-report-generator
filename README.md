@@ -1,6 +1,6 @@
 # ASH Security Report Generator
 
-A standalone browser-based cybersecurity report generation application for an authorized university laboratory project.
+A standalone browser-based cybersecurity report generation application created by me (Mohammed Ashraf Shaikh) for a university dissertation & lab testing project.
 
 ## Report types
 
@@ -24,17 +24,6 @@ This project is intentionally structured as a static website:
 - `sample-data/` — sanitized demonstration CSV files
 
 No Node.js installation or build process is required.
-
-To publish it:
-
-1. Create a **new, separate GitHub repository**, for example `ash-security-report-generator`.
-2. Upload the contents of this folder to the repository.
-3. Commit to the `main` branch.
-4. Open **Settings → Pages**.
-5. Choose **Deploy from a branch**.
-6. Select `main` and `/ (root)`.
-7. Save.
-8. Open the GitHub Pages URL provided by GitHub.
 
 University staff can then open the URL directly in a normal browser without downloading the project.
 
@@ -64,4 +53,4 @@ The visualizations are generated in the browser using the supplied records; no s
 
 ## Academic use
 
-This project is intended for an authorized university cybersecurity laboratory/reporting exercise. Security testing should only be conducted against systems for which explicit authorization has been provided.
+This project is intended for an authorized university cybersecurity project reporting exercise. Security testing should only be conducted against systems for which explicit authorization has been provided.
