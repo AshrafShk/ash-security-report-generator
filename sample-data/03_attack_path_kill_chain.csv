@@ -1,0 +1,9 @@
+step,stage,technique,technique_name,source,target,result
+1,Reconnaissance,T1046,Network Service Scanning,KALI-01,AD-SERVER-01,Services identified
+2,Initial Access,T1190,Exploit Public-Facing Application,KALI-01,AD-SERVER-01,Lab access path established
+3,Credential Access,T1003,OS Credential Dumping,KALI-01,AD-SERVER-01,Administrator credential material obtained in lab
+4,Credential Access,T1555,Credentials from Password Stores,KALI-01,AD-SERVER-01,Credential access activity observed
+5,Lateral Movement,T1021.002,SMB/Windows Admin Shares,KALI-01,AD-SERVER-01,Administrative share access
+6,Command and Control,T1021.002,SMB/Windows Admin Shares,KALI-01,AD-SERVER-01,Remote administrative access
+7,Impact,T1485,Data Destruction,KALI-01,AD-SERVER-01,ExcelRecord.xlsx deleted in lab
+8,Defense Evasion,T1070.001,Clear Windows Event Logs,KALI-01,AD-SERVER-01,Selected generated logs deleted in lab

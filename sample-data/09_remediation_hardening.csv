@@ -1,0 +1,8 @@
+actionId,control,asset,priority,status,finding,recommendedAction,owner,target
+H-001,Privileged access,AD-SERVER-01,Critical,Open,Administrator credential compromise demonstrated,Reset privileged credentials and enforce least privilege,AD Team,Immediate
+H-002,Legacy services,AD-SERVER-01,High,Open,FTP exposure identified,Disable FTP or restrict it to isolated management use,Infrastructure,7 days
+H-003,SMB hardening,AD-SERVER-01,High,In Progress,Administrative share access demonstrated,Restrict SMB exposure and administrative shares,Infrastructure,14 days
+H-004,Centralized logging,AD-SERVER-01,Critical,Open,Selected logs were deleted/cleared during lab,Forward security logs to protected centralized storage,SOC,7 days
+H-005,File protection,AD-SERVER-01,High,Open,Test Excel file was deleted,"Implement access controls, backups, and file-integrity monitoring",IT Operations,14 days
+H-006,Legacy OS,AD-SERVER-01,High,Open,Windows Server 2008 R2 is legacy,Migrate to a supported Windows Server release,Infrastructure,30 days
+H-007,Network segmentation,AD-SERVER-01,High,Open,Testing workstation could reach directory server,Restrict east-west access with firewall rules,Network,14 days

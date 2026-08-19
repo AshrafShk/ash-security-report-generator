@@ -1,0 +1,7 @@
+riskId,asset,threat,vulnerability,likelihood,impact,riskScore,riskBand,treatment
+R-001,AD-SERVER-01,Credential compromise,Weak/legacy authentication path,5,5,25,Critical,Mitigate
+R-002,AD-SERVER-01,Unauthorized administrative access,Excessive privileged access exposure,4,5,20,Critical,Mitigate
+R-003,AD-SERVER-01,Data destruction,Insufficient file access controls,4,4,16,High,Mitigate
+R-004,AD-SERVER-01,Defense evasion,Insufficient centralized logging,4,4,16,High,Mitigate
+R-005,AD-SERVER-01,Remote access abuse,Legacy remote administration exposure,3,4,12,Medium,Mitigate
+R-006,KALI-01,Compromise of testing workstation,Broad internal reachability,2,3,6,Low,Monitor

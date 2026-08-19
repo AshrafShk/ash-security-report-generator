@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASH Security Report Generator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="ash_body1">
+<header class="ash_header1">
+  <div><div class="ash_brand1">ASH</div><h1 class="ash_h1">Security Report Generator</h1><p class="ash_subtitle1">Nine cybersecurity report types with calculations and visual analytics.</p></div>
+  <span class="ash_badge1">Standalone • No libraries</span>
+</header>
+<main class="ash_main1">
+<section class="ash_card1">
+  <h2 class="ash_h2">Report configuration</h2>
+  <label class="ash_label1">Report type</label>
+  <select id="ash_reportType1" class="ash_select1"></select>
+  <div class="ash_grid2">
+    <div>
+      <label class="ash_label1">Data file</label>
+      <input id="ash_file1" class="ash_input1" type="file" accept=".csv,.json,.txt,.log">
+      <p class="ash_help1">CSV, JSON, TXT and LOG work without any external library. Excel can be converted to CSV first.</p>
+    </div>
+    <div>
+      <label class="ash_label1">Data</label>
+      <textarea id="ash_text1" class="ash_textarea1" placeholder="Paste CSV or JSON here..."></textarea>
+    </div>
+  </div>
+  <div class="ash_actions1">
+    <button id="ash_demo1" class="ash_buttonSecondary1" type="button">Load demo data</button>
+    <button id="ash_generate1" class="ash_buttonPrimary1" type="button">Generate report</button>
+    <button id="ash_export1" class="ash_buttonSecondary1" type="button">Export HTML</button>
+  </div>
+  <div id="ash_status1" class="ash_status1">Ready.</div>
+</section>
+<section class="ash_card1">
+  <h2 class="ash_h2">Generated report</h2>
+  <div id="ash_reportMeta1" class="ash_help1"></div>
+  <article id="ash_report1" class="ash_report1"><div class="ash_empty1">Click Load demo data to begin.</div></article>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

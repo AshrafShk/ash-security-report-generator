@@ -1,0 +1,7 @@
+technique,technique_name,tactic,observed_activity,evidence,confidence
+T1046,Network Service Scanning,Reconnaissance,Service enumeration against lab server,Scan output,High
+T1190,Exploit Public-Facing Application,Initial Access,Access path through exposed service,Assessment notes,Medium
+T1003,OS Credential Dumping,Credential Access,Credential material obtained during lab exercise,Credential-access output,High
+T1021.002,SMB/Windows Admin Shares,Lateral Movement,Administrative share access to C: drive,File access evidence,High
+T1485,Data Destruction,Impact,ExcelRecord.xlsx deleted,File-system evidence,High
+T1070.001,Clear Windows Event Logs,Defense Evasion,Selected generated logs deleted/cleared,Event log evidence,High

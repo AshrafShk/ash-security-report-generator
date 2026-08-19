@@ -1,0 +1,7 @@
+asset,hostname,os,role,exposure,port,service,criticality
+AS-001,AD-SERVER-01,Windows Server 2008 R2,Active Directory,Internal,21,FTP,Critical
+AS-002,AD-SERVER-01,Windows Server 2008 R2,Active Directory,Internal,445,SMB,Critical
+AS-003,AD-SERVER-01,Windows Server 2008 R2,Active Directory,Internal,3389,RDP,High
+AS-004,AD-SERVER-01,Windows Server 2008 R2,Active Directory,Internal,389,LDAP,Critical
+AS-005,KALI-01,Kali Linux,Penetration Testing Workstation,Internal,22,SSH,Medium
+AS-006,AD-SERVER-01,Windows Server 2008 R2,File Server,Internal,21,FTP,High

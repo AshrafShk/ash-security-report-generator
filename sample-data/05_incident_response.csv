@@ -1,0 +1,4 @@
+incidentId,severity,status,host,initialAccess,account,affectedAsset,impact,containment,eradication,recovery
+IR-001,Critical,Closed,AD-SERVER-01,Legacy service exposure,Administrator,AD-SERVER-01,Privileged access and file deletion,Isolated lab server,Reset credentials and removed access path,Restored deleted test file from backup
+IR-002,High,Closed,AD-SERVER-01,Credential compromise,Administrator,AD-SERVER-01,Administrative share access,Disabled compromised account,Credential reset,Validated access controls
+IR-003,High,Investigating,AD-SERVER-01,Log tampering,Administrator,AD-SERVER-01,Reduced forensic visibility,Preserved remaining evidence,Review logging controls,Pending validation

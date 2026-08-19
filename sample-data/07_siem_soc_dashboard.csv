@@ -1,0 +1,7 @@
+timestamp,eventType,action,host,source,severity,count,detection
+2026-04-10 09:10,Authentication,Logon Success,AD-SERVER-01,Windows Security,Low,1,Successful privileged logon
+2026-04-10 09:11,Authentication,Logon Failure,AD-SERVER-01,Windows Security,Medium,1,Repeated authentication attempt
+2026-04-10 09:12,Process,Process Creation,AD-SERVER-01,Windows Security,Medium,1,New process under privileged account
+2026-04-10 09:15,Network,Network Share Access,AD-SERVER-01,Windows Security,High,1,Administrative share access
+2026-04-10 09:17,File,File Delete,AD-SERVER-01,Windows Security,Critical,1,Sensitive test file deletion
+2026-04-10 09:19,Security,Audit Log Cleared,AD-SERVER-01,Windows Security,Critical,1,Audit log tampering

@@ -1,0 +1,9 @@
+timestamp,eventId,action,host,user,source,severity,result
+2026-04-10 09:10:01,4624,Logon Success,AD-SERVER-01,Administrator,KALI-01,Information,Success
+2026-04-10 09:11:14,4625,Logon Failure,AD-SERVER-01,Administrator,KALI-01,Warning,Failure
+2026-04-10 09:12:02,4688,Process Creation,AD-SERVER-01,Administrator,KALI-01,Information,Success
+2026-04-10 09:13:20,4672,Special Privileges Assigned,AD-SERVER-01,Administrator,KALI-01,Warning,Success
+2026-04-10 09:15:43,5140,Network Share Access,AD-SERVER-01,Administrator,KALI-01,Warning,Success
+2026-04-10 09:17:09,4663,File Access,AD-SERVER-01,Administrator,KALI-01,Warning,Success
+2026-04-10 09:17:51,4663,File Delete,AD-SERVER-01,Administrator,KALI-01,High,Success
+2026-04-10 09:19:33,1102,Audit Log Cleared,AD-SERVER-01,Administrator,KALI-01,High,Success
