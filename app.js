@@ -102,7 +102,7 @@ function ash_table1(rows){if(!rows.length)return "<div>No records.</div>";var ke
 function ash_report1(type,data){
 var rows=ash_rows1(data,type);if(!rows.length)rows=[{status:"No data"}];
 var title=ash_types1.filter(function(x){return x[0]===type;})[0][1];
-return '<div class="ash_reportHeader1"><h1>'+ash_esc1(title)+'</h1><p>Generated '+new Date().toLocaleString()+'</p></div><div class="ash_metricGrid1"><div class="ash_metric1"><div class="ash_metricValue1">'+rows.length+'</div><div class="ash_metricLabel1">Records</div></div><div class="ash_metric1"><div class="ash_metricValue1">'+new Set(rows.map(function(r){return JSON.stringify(r);})).size+'</div><div class="ash_metricLabel1">Unique records</div></div><div class="ash_metric1"><div class="ash_metricValue1">'+Object.keys(rows[0]).length+'</div><div class="ash_metricLabel1">Fields</div></div><div class="ash_metric1"><div class="ash_metricValue1">ASH</div><div class="ash_metricLabel1">Engine</div></div></div><section class="ash_reportSection1"><h2>Visual Analytics</h2><div class="ash_visualGrid1">'+ash_visuals1(type,rows)+'</div></section><section class="ash_reportSection1"><h2>Source Records</h2>'+ash_table1(rows)+'</section>';
+return '<div class="ash_reportHeader1"><h1>'+ash_esc1(title)+'</h1><p>Generated '+new Date().toLocaleString()+'</p></div><div class="ash_metricGrid1"><div class="ash_metric1"><div class="ash_metricValue1">'+rows.length+'</div><div class="ash_metricLabel1">Records</div></div><div class="ash_metric1"><div class="ash_metricValue1">'+new Set(rows.map(function(r){return JSON.stringify(r);})).size+'</div><div class="ash_metricLabel1">Unique records</div></div><div class="ash_metric1"><div class="ash_metricValue1">'+Object.keys(rows[0]).length+'</div><div class="ash_metricLabel1">Fields</div></div><div class="ash_metric1"><div class="ash_metricValue1">ASH</div><div class="ash_metricLabel1">Cyber Engine</div></div></div><section class="ash_reportSection1"><h2>Visual Analytics</h2><div class="ash_visualGrid1">'+ash_visuals1(type,rows)+'</div></section><section class="ash_reportSection1"><h2>Source Records</h2>'+ash_table1(rows)+'</section>';
 }
 function ash_csv1(t){var ls=t.trim().split(/\r?\n/);if(!ls.length)return[];var h=ls[0].split(",").map(function(x){return x.trim().replace(/^"|"$/g,"");});return ls.slice(1).filter(Boolean).map(function(l){var v=l.split(",");var o={};h.forEach(function(k,i){o[k]=String(v[i]||"").trim().replace(/^"|"$/g,"");});return o;});}
 function ash_parse1(t){try{return JSON.parse(t);}catch(e){return ash_csv1(t);}}
@@ -138,7 +138,7 @@ reader.onload=function(){try{ash_current1=ash_parse1(reader.result);ash_el1("ash
 reader.readAsText(f);
 });
 ash_el1("ash_export1").addEventListener("click",function(){
-var html='<!doctype html><html><head><meta charset="utf-8"><title>ASH Report</title><link rel="stylesheet" href="styles.css"></head><body class="ash_body1"><main class="ash_main1"><section class="ash_card1">'+ash_el1("ash_report1").innerHTML+'</section></main></body></html>';
+var html='<!doctype html><html><head><meta charset="utf-8"><title>ASH Cyber Report</title><link rel="stylesheet" href="styles.css"></head><body class="ash_body1"><main class="ash_main1"><section class="ash_card1">'+ash_el1("ash_report1").innerHTML+'</section></main></body></html>';
 var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([html],{type:"text/html"}));a.download="ash_security_report.html";a.click();
 });
 ash_render1();
