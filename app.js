@@ -80,11 +80,11 @@ function ash_group1(rows,names){var m={};rows.forEach(function(r){var v=String(a
 function ash_pie1(title,pairs){
 var total=pairs.reduce(function(a,x){return a+ash_num1(x[1]);},0),cur=0,st=[];
 pairs.slice(0,8).forEach(function(x,i){var s=cur/total*100;cur+=ash_num1(x[1]);st.push(ash_palette1[i%ash_palette1.length]+" "+s+"% "+cur/total*100+"%");});
-return '<div class="ash_chartCard1"><h3 class="ash_chartTitle1">'+ash_esc1(title)+'</h3><div class="ash_pie1" style="background:conic-gradient('+st.join(",")+')"><div class="ash_pieHole1"><strong>'+total+'</strong><span>Total</span></div></div><div class="ash_legend1">'+pairs.slice(0,8).map(function(x,i){return '<div class="ash_legendItem1"><span class="ash_legendDot1" style="background:'+ash_palette1[i%ash_palette1.length]+'"></span>'+ash_esc1(x[0])+': <strong>'+x[1]+'</strong></div>';}).join("")+'</div></div>';
+return '<div class="ash_chartCard1"><h3 class="ash_chartTitle1">'+this.title+'</h3><div class="ash_pie1" style="background:conic-gradient('+st.join(",")+')"><div class="ash_pieHole1"><strong>'+total+'</strong><span>Total</span></div></div><div class="ash_legend1">'+pairs.slice(0,8).map(function(x,i){return '<div class="ash_legendItem1"><span class="ash_legendDot1" style="background:'+ash_palette1[i%ash_palette1.length]+'"></span>'+ash_esc1(x[0])+': <strong>'+x[1]+'</strong></div>';}).join("")+'</div></div>';
 }
 function ash_bar1(title,pairs){
 var max=Math.max.apply(null,pairs.map(function(x){return ash_num1(x[1]);}).concat([1]));
-return '<div class="ash_chartCard1"><h3 class="ash_chartTitle1">'+ash_esc1(title)+'</h3>'+pairs.slice(0,10).map(function(x,i){var pct=Math.max(ash_num1(x[1])/max*100,2);return '<div class="ash_barRow1"><div class="ash_barLabel1">'+ash_esc1(x[0])+'</div><div class="ash_barTrack1"><div class="ash_barFill1" style="width:'+pct+'%;background:'+ash_palette1[i%ash_palette1.length]+'"></div></div><strong class="ash_barValue1">'+x[1]+'</strong></div>';}).join("")+'</div>';
+return '<div class="ash_chartCard1"><h3 class="ash_chartTitle1">'+this.title+'</h3>'+pairs.slice(0,10).map(function(x,i){var pct=Math.max(ash_num1(x[1])/max*100,2);return '<div class="ash_barRow1"><div class="ash_barLabel1">'+ash_esc1(x[0])+'</div><div class="ash_barTrack1"><div class="ash_barFill1" style="width:'+pct+'%;background:'+ash_palette1[i%ash_palette1.length]+'"></div></div><strong class="ash_barValue1">'+x[1]+'</strong></div>';}).join("")+'</div>';
 }
 function ash_visuals1(type,rows){
 var a,b,visualData1, visualData2;
