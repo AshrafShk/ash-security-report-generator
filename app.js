@@ -87,9 +87,9 @@ var max=Math.max.apply(null,pairs.map(function(x){return ash_num1(x[1]);}).conca
 return '<div class="ash_chartCard1"><h3 class="ash_chartTitle1">'+ash_esc1(title)+'</h3>'+pairs.slice(0,10).map(function(x,i){var pct=Math.max(ash_num1(x[1])/max*100,2);return '<div class="ash_barRow1"><div class="ash_barLabel1">'+ash_esc1(x[0])+'</div><div class="ash_barTrack1"><div class="ash_barFill1" style="width:'+pct+'%;background:'+ash_palette1[i%ash_palette1.length]+'"></div></div><strong class="ash_barValue1">'+x[1]+'</strong></div>';}).join("")+'</div>';
 }
 function ash_visuals1(type,rows){
-var a,b;
-if(type==="vulnerability"){a=ash_group1(rows,["severity"]);b=ash_group1(rows,["status"]);}
-else if(type==="attack-surface"){a=ash_group1(rows,['Exposed Port is '+"exposed_port"]);b=ash_group1(rows,["risk_level"]);}
+var a,b,visualData1, visualData2;
+if(type==="vulnerability"){a=ash_group1(rows,["severity"]);b=ash_group1(rows,["status"]);visualData1="Severity"; visualData2="Status";}
+else if(type==="attack-surface"){a=ash_group1(rows,["exposed_port"]);b=ash_group1(rows,["risk_level"]);}
 else if(type==="attack-path"){a=ash_group1(rows,["stage","phase"]);b=ash_group1(rows,["technique","target"]);}
 else if(type==="event-log"){a=ash_group1(rows,["log_source","event_id"]);b=ash_group1(rows,["severity"]);}
 else if(type==="incident-response"){a=ash_group1(rows,["severity"]);b=ash_group1(rows,["status"]);}
@@ -98,7 +98,7 @@ else if(type==="siem-soc"){a=ash_group1(rows,["severity"]);b=ash_group1(rows,["s
 else if(type==="risk"){a=ash_group1(rows,["risk_rating", "risk_score"]);b=ash_group1(rows,["asset","impact"]);}
 else if(type==="hardening"){a=ash_group1(rows,["status"]);b=ash_group1(rows,["priority","severity"]);}
 else {var bands={};rows.forEach(function(r){var s=ash_num1(ash_get1(r,["riskScore","score"],0))||ash_num1(ash_get1(r,["likelihood"],0))*ash_num1(ash_get1(r,["impact"],0));var q=s>=15?"High":s>=8?"Medium":"Low";bands[q]=(bands[q]||0)+1;});a=Object.keys(bands).map(function(k){return[k,bands[k]];});b=rows.map(function(r){return[String(ash_get1(r,["asset","assetName"])),ash_num1(ash_get1(r,["likelihood"],0))*ash_num1(ash_get1(r,["impact"],0))];}).sort(function(x,y){return y[1]-x[1];});}
-return ash_pie1("Distribution",a)+ash_bar1("Breakdown",b);
+return ash_pie1(visualData1,a)+ash_bar1(visualData2,b);
 }
 function ash_table1(rows){if(!rows.length)return "<div>No records.</div>";var keys=Object.keys(rows[0]);return '<div class="ash_tableWrap1"><table class="ash_table1"><thead><tr>'+keys.map(function(k){return "<th>"+ash_esc1(k)+"</th>";}).join("")+'</tr></thead><tbody>'+rows.map(function(r){return "<tr>"+keys.map(function(k){return "<td>"+ash_esc1(r[k])+"</td>";}).join("");}).join("</tr>")+"</tbody></table></div>";}
 function ash_report1(type,data){
