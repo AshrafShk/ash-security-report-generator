@@ -89,7 +89,7 @@ return '<div class="ash_chartCard1"><h3 class="ash_chartTitle1">'+ash_esc1(title
 function ash_visuals1(type,rows){
 var a,b;
 if(type==="vulnerability"){a=ash_group1(rows,["severity"]);b=ash_group1(rows,["status"]);}
-else if(type==="attack-surface"){a=ash_group1(rows,["exposed_port","exposed_service"]);b=ash_group1(rows,["risk_level"]);}
+else if(type==="attack-surface"){a=ash_group1(rows,["exposed_port"]);b=ash_group1(rows,["risk_level"]);}
 else if(type==="attack-path"){a=ash_group1(rows,["stage","phase"]);b=ash_group1(rows,["technique","target"]);}
 else if(type==="event-log"){a=ash_group1(rows,["log_source","event_id"]);b=ash_group1(rows,["severity"]);}
 else if(type==="incident-response"){a=ash_group1(rows,["severity"]);b=ash_group1(rows,["status"]);}
