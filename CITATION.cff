@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use ASH Security Report Generator in your work, research, security assessments, or documentation, please cite it as below."
+
+type: software
+
+title: "ASH Security Report Generator"
+version: 1.0.13
+date-released: 2026-08-19
+
+abstract: >-
+  ASH Security Report Generator is a standalone browser-based cybersecurity
+  reporting tool for generating HTML security reports from CSV, JSON, TXT,
+  and LOG data. It provides configurable report types, security-focused
+  calculations, visual analytics, demo data, and HTML export without requiring
+  external libraries.
+
+authors:
+  - family-names: "Shaikh"
+    given-names: "Mohammed Ashraf"
+
+url: "https://ashrafshk.github.io/ash-security-report-generator/"
+repository-code: "https://github.com/ashrafshk/ash-security-report-generator"
+
+keywords:
+  - "cybersecurity"
+  - "security reporting"
+  - "security assessment"
+  - "HTML reports"
+  - "security analytics"
+  - "vulnerability reporting"
+  - "browser-based tool"
+
+license: "MIT"
+
